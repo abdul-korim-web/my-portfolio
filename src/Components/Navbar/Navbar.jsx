@@ -56,7 +56,7 @@ const Navbar = () => {
     <>
       {/* Fixed Top Navbar */}
       <motion.nav
-        className={`w-full z-50 flex items-center justify-between px-6 py-3 ${navbarBg}`}
+        className={`w-full z-50 flex items-center justify-between px-6 md:px-20 md:py-5 py-3 ${navbarBg}`}
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
