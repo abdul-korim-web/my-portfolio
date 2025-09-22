@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 
 const Hero = () => {
   const skills = ["React", "TailwindCSS", "JavaScript", "HTML", "CSS"];
-  const roles = ["React Developer", "Frontend Developer", "UI/UX Enthusiast"];
+  const roles = ["React Developer", "Frontend Developer", "javascript Developer"];
 
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -54,7 +54,7 @@ const Hero = () => {
       <div className="w-full md:w-1/2 flex flex-col space-y-5 text-center md:text-left">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
           Hello, I am Abdul Korim{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600 block w-full">
             {displayText}
             <span className="inline-block w-1 h-6 bg-gray-900 dark:bg-white animate-pulse ml-1"></span>
           </span>

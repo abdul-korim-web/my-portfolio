@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import { BrowserRouter } from 'react-router-dom'
 import Hero from './Components/Hero Section/Hero'
+import About from "./Components/About Section/About"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Navbar/>
       <Hero/>
+      <About/>
     </BrowserRouter>
   )
 }
