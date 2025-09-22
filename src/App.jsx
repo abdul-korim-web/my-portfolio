@@ -9,6 +9,7 @@ import About from "./Components/About Section/About"
 import Skills from "./Components/Skills/Skills"
 import Projects from "./Components/Projects/Projects"
 import Contact from './Components/Contact/Contact'
+import Footer from './Components/Footer/Footer'
 // import Testimonials from './Components/Testimonials/Testimonials'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Projects/>
       {/* <Testimonials/> */}
       <Contact/>
+      <Footer/>
     </BrowserRouter>
   )
 }
