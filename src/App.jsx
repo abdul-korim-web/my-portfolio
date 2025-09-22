@@ -8,6 +8,8 @@ import Hero from './Components/Hero Section/Hero'
 import About from "./Components/About Section/About"
 import Skills from "./Components/Skills/Skills"
 import Projects from "./Components/Projects/Projects"
+import Contact from './Components/Contact/Contact'
+// import Testimonials from './Components/Testimonials/Testimonials'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +21,8 @@ function App() {
       <About/>
       <Skills/>
       <Projects/>
+      {/* <Testimonials/> */}
+      <Contact/>
     </BrowserRouter>
   )
 }
