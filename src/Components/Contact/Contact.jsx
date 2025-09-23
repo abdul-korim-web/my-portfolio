@@ -40,6 +40,7 @@ const ContactForm = () => {
         <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
           Contact <span className="text-indigo-600">Me</span>
         </h2>
+        <h2 className="text-center mb-3 dark:text-white">Got a project idea or want to collaborate? Fill out the form below and I’ll get back to you.</h2>
 
         <motion.form
           ref={form}
