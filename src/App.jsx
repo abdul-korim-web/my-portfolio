@@ -3,13 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
-import { BrowserRouter } from 'react-router-dom'
-import Hero from './Components/Hero Section/Hero'
-import About from "./Components/About Section/About"
-import Skills from "./Components/Skills/Skills"
-import Projects from "./Components/Projects/Projects"
-import Contact from './Components/Contact/Contact'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Footer from './Components/Footer/Footer'
+import Homelayout from './Components/HomeLayout/Homelayout'
+import AboutMe from './Components/AboutMe/AboutMe'
 // import Testimonials from './Components/Testimonials/Testimonials'
 
 function App() {
@@ -18,12 +15,10 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar/>
-      <Hero/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      {/* <Testimonials/> */}
-      <Contact/>
+      <Routes>
+        <Route path='/' element={<Homelayout/>}/>
+        <Route path='/about' element={<AboutMe/>}/>
+      </Routes>
       <Footer/>
     </BrowserRouter>
   )

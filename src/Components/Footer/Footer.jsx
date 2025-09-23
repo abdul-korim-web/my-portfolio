@@ -1,7 +1,21 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaFacebook } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  let native = useNavigate()
+   const handleNavigate = (path, sectionId) => {
+    navigate(path); // navigate to the page first
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }, 200);
+  };
+  
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -31,16 +45,16 @@ const Footer = () => {
           <h4 className="text-xl font-semibold text-white mb-4">Quick Links</h4>
           <ul className="space-y-2">
             <li>
-              <a href="#about" className="hover:text-white transition">About Me</a>
+              <a href="#about" className="hover:text-white transition" onClick={()=>native(`/about`)}>About Me</a>
             </li>
             <li>
-              <a href="#projects" className="hover:text-white transition">Projects</a>
+              <a href="#projects" className="hover:text-white transition" onClick={()=>native(`/Projects`)}>Projects</a>
             </li>
             <li>
-              <a href="#skills" className="hover:text-white transition">Skills</a>
+              <a href="#skills" className="hover:text-white transition" onClick={()=>native(`/Skills`)}>Skills</a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-white transition">Contact</a>
+              <a href="#contact" className="hover:text-white transition" onClick={()=>native(`/Contact`)}>Contact</a>
             </li>
           </ul>
         </div>

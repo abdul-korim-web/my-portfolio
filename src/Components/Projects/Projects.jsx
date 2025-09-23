@@ -9,7 +9,7 @@ const projects = [
       "The project features a clean UI, responsive design, and smooth animations for a professional SaaS experience.",
     image: "/image/Wizia.png",
     liveLink: "https://abdul-wizia-react.netlify.app/",
-    sourceLink: "https://github.com/abdulkorim/wizia-project",
+    sourceLink: "https://github.com/abdul-korim-web/Wizia",
   },
   {
     title: "Degic Project",
@@ -17,7 +17,7 @@ const projects = [
       "This project demonstrates responsive UI design, animations, and routing with advanced tools like Tailwind CSS, Framer Motion, and Material UI.",
     image: "/image/DegicPeoject.png",
     liveLink: "https://degic-react-peoject.netlify.app/",
-    sourceLink: "https://github.com/abdulkorim/degic-project",
+    sourceLink: "https://github.com/abdul-korim-web/Degic-React-Peoject-01",
   },
   {
     title: "Wern Finance",
@@ -25,7 +25,7 @@ const projects = [
       "The project provides features like debit card creation, offers section, reviews, FAQs, and a contact form — all with a clean UI and animations.",
     image: "/image/WernFinance.png",
     liveLink: "https://react-wern-finance.netlify.app/",
-    sourceLink: "https://github.com/abdulkorim/wern-finance",
+    sourceLink: "https://github.com/abdul-korim-web/Wern-Finance-React-Project-2",
   },
 ];
 

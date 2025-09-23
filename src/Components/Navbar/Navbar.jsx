@@ -5,10 +5,10 @@ import { BeatLoader } from "react-spinners";
 
 const Navbar = () => {
   const navitems = [
-    { item: "About Us", path: "/about" },
+    { item: "About Me", path: "/about" },
     { item: "Pricing", path: "/pricing" },
-    { item: "Customers", path: "/customers" },
-    { item: "Solutions", path: "/solutions" },
+    { item: "Skills", path: "/Skills" },
+    { item: "Projects", path: "/Projects" },
   ];
 
   const [baropen, setbaropen] = useState(false);
@@ -159,7 +159,7 @@ const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className={`overflow-hidden md:hidden mt-[72px] ${
+            className={`overflow-hidden md:hidden ${
               darkMode ? "bg-gray-900/95" : "bg-black/80"
             }`}
           >
@@ -191,6 +191,7 @@ const Navbar = () => {
                     fontWeight: 500,
                     fontSize: "14px",
                     width: "80%",
+                    marginBottom:"10px"
                   }}
                 >
                   {loadingBookADemoBtn ? <BeatLoader /> : "Book a Demo"}
