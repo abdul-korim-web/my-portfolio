@@ -12,9 +12,25 @@ import Pricing from './Components/Pricing/Pricing'
 import NavSkills from "./Components/NavSkills/NavSkills"
 import NavProjects from './Components/NavProjects/NavProjects'
 import NavContact from './Components/NavContact/NavContact'
+import {ScaleLoader}  from "react-spinners"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [istimeup,settimeup] = useState(true)
+  setTimeout(() => {
+    settimeup(false)
+    
+  }, 2000);
+  if (istimeup){
+
+      return(
+        <>
+          <div className='flex min-h-[100vh] justify-center items-center'>
+            <ScaleLoader color='#36D7B7' />
+          </div>
+        </>
+      )
+    
+  }
 
   return (
     <BrowserRouter>

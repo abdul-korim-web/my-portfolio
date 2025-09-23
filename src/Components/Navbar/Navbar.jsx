@@ -3,9 +3,11 @@ import Button from "@mui/material/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { BeatLoader } from "react-spinners";
 import { NavLink, useNavigate } from "react-router-dom";
+import "./Navbar.css"
 
 const Navbar = () => {
   const navitems = [
+     { item: "Home", path: "/ "},
     { item: "About Me", path: "/about" },
     { item: "Pricing", path: "/pricing" },
     { item: "Skills", path: "/Skills" },
