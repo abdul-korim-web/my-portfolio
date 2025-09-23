@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const skills = ["React", "TailwindCSS", "JavaScript", "HTML", "CSS"];
@@ -9,6 +10,7 @@ const Hero = () => {
   const [displayText, setDisplayText] = useState("");
   const [typingIndex, setTypingIndex] = useState(0);
   const [skillIndex, setSkillIndex] = useState(0);
+  let native = useNavigate()
 
   // Typing animation for roles (looping)
   useEffect(() => {
@@ -88,6 +90,7 @@ const Hero = () => {
         {/* Buttons */}
         <div className="flex flex-wrap gap-4 mt-5 justify-center md:justify-start">
           <Button
+          onClick={()=>{native(`/contact`)}}
             variant="contained"
             sx={{
               background:
@@ -106,6 +109,7 @@ const Hero = () => {
           </Button>
 
           <Button
+          onClick={()=>{native(`/projects`)}}
             variant="contained"
             sx={{
               borderColor: "white",

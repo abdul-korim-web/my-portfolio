@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import {HashLoader}  from "react-spinners"
 
 const Pricing = () => {
   const plans = [
@@ -33,6 +34,21 @@ const Pricing = () => {
       popular: false,
     },
   ];
+  const [isClick,setisClick] = useState(false)
+ 
+  let planBtn = ()=>{
+    setisClick(true)
+    setTimeout(() => {
+    let confirmed = window.confirm(`Do you want to buy this product?`)
+    if (confirmed){
+      window.open("https://github.com/abdul-korim-web/")
+      setisClick(false)
+    } else{
+      setisClick(false)
+    }
+      
+    }, 2000);
+  }
 
   return (
     <section id="pricing" className="py-24 px-6 bg-gray-50 dark:bg-gray-900">
@@ -80,13 +96,14 @@ const Pricing = () => {
                 ))}
               </ul>
               <button
+              onClick={planBtn}
                 className={`w-full py-3 rounded-full font-semibold text-white transition duration-300 ${
                   plan.popular
                     ? "bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500"
-                    : "bg-gray-800 hover:bg-gray-700"
+                    : "bg-gray-800 hover:bg-gray-700 cursor-pointer "
                 }`}
               >
-                Choose Plan
+                {isClick?(<><HashLoader size={20} color="white" /></>):(<>Choose Plan</>)}
               </button>
             </motion.div>
           ))}

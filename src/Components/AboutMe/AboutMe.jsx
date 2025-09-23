@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const AboutMe = () => {
+  let native = useNavigate()
   return (
     <section className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-20 px-6">
       <div className="max-w-6xl mx-auto">
@@ -53,18 +56,20 @@ const AboutMe = () => {
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4">
-              <a
-                href="/projects"
-                className="px-7 py-3 bg-indigo-600 text-white rounded-full font-semibold shadow-md hover:bg-indigo-500 transition duration-300"
+              <button
+              onClick={()=>{native(`/projects`)}}
+               
+                className="px-7 py-3 bg-indigo-600 text-white rounded-full font-semibold shadow-md hover:bg-indigo-500 transition duration-300 cursor-pointer"
               >
                 🚀 View My Projects
-              </a>
-              <a
-                href="/contact"
-                className="px-7 py-3 border-2 border-indigo-600 text-indigo-600 rounded-full font-semibold hover:bg-indigo-600 hover:text-white transition duration-300"
+              </button>
+              <button
+              onClick={()=>{native(`/contact`)}}
+                
+                className="px-7 py-3 border-2 border-indigo-600 text-indigo-600 rounded-full font-semibold hover:bg-indigo-600 hover:text-white transition duration-300 cursor-pointer"
               >
                 📩 Contact Me
-              </a>
+              </button>
             </div>
           </motion.div>
         </div>

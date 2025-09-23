@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { BeatLoader } from "react-spinners";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navitems = [
@@ -54,6 +54,8 @@ const Navbar = () => {
   const navTextColor = darkMode ? "text-gray-200" : "text-white";
   const hamburgerColor = darkMode ? "text-gray-200" : "text-white";
 
+  let native = useNavigate()
+
   return (
     <>
       {/* Fixed Top Navbar */}
@@ -71,9 +73,11 @@ const Navbar = () => {
           transition={{ duration: 0.6 }}
         >
           <img
-            className="w-[50px] h-[50px] rounded-full"
+            className="w-[50px] h-[50px] rounded-full cursor-pointer"
             src="/image/logo.png"
             alt="logo"
+            onClick={()=>{native(`/`)}}
+
           />
         </motion.div>
 
@@ -198,20 +202,7 @@ const Navbar = () => {
                 >
                   {loadingBookADemoBtn ? <BeatLoader /> : "Book a Demo"}
                 </Button>
-                <Button
-                  variant="outlined"
-                  sx={{
-                    borderRadius: "100px",
-                    color: "#FFFFFF",
-                    fontWeight: 500,
-                    fontSize: "14px",
-                    border: "1px solid #FFFFFF",
-                    width: "80%",
-                  }}
-                  onClick={() => setbaropen(false)}
-                >
-                  Contact Us
-                </Button>
+                
               </div>
             </ul>
           </motion.div>
