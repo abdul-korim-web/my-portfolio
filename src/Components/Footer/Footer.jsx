@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaFacebook } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   let native = useNavigate()
@@ -45,16 +45,19 @@ const Footer = () => {
           <h4 className="text-xl font-semibold text-white mb-4">Quick Links</h4>
           <ul className="space-y-2">
             <li>
-              <a href="#about" className="hover:text-white transition" onClick={()=>native(`/about`)}>About Me</a>
+              <Link to={`/about`} className="hover:text-white transition">About Me</Link>
             </li>
             <li>
-              <a href="#projects" className="hover:text-white transition" onClick={()=>native(`/Projects`)}>Projects</a>
+              <Link to={`/Pricing`}  className="hover:text-white transition" >Pricing</Link>
             </li>
             <li>
-              <a href="#skills" className="hover:text-white transition" onClick={()=>native(`/Skills`)}>Skills</a>
+              <Link to={`/about`}  className="hover:text-white transition" >Projects</Link>
             </li>
             <li>
-              <a href="#contact" className="hover:text-white transition" onClick={()=>native(`/Contact`)}>Contact</a>
+              <Link to={`/Projects`}  className="hover:text-white transition" >Skills</Link>
+            </li>
+            <li>
+              <Link to={`/Contact`}  className="hover:text-white transition" >Contact</Link>
             </li>
           </ul>
         </div>

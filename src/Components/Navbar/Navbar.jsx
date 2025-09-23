@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { BeatLoader } from "react-spinners";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navitems = [
@@ -9,6 +10,7 @@ const Navbar = () => {
     { item: "Pricing", path: "/pricing" },
     { item: "Skills", path: "/Skills" },
     { item: "Projects", path: "/Projects" },
+    { item: "Contact", path: "/Contact" },
   ];
 
   const [baropen, setbaropen] = useState(false);
@@ -89,7 +91,7 @@ const Navbar = () => {
                 whileTap={{ scale: 0.95 }}
                 className={`${navTextColor} cursor-pointer font-medium text-lg`}
               >
-                <a href={item.path}>{item.item}</a>
+                <NavLink to={item.path}>{item.item}</NavLink>
               </motion.li>
             ))}
           </ul>
@@ -173,9 +175,9 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   className={`${navTextColor} cursor-pointer text-lg`}
                 >
-                  <a href={item.path} onClick={() => setbaropen(false)}>
+                  <NavLink to={item.path} onClick={() => setbaropen(false)}>
                     {item.item}
-                  </a>
+                  </NavLink>
                 </motion.li>
               ))}
 
