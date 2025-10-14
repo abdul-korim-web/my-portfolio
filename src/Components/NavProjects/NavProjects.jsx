@@ -4,6 +4,22 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    title: "Weather App",
+    description:
+      "Weather App is a simple React web application that provides real-time weather updates for any city. Users can search for a city, view temperature, humidity, wind speed, and see a live weather icon.",
+    image: "/image/WeatherProject.png",
+    liveLink: "https://abdul-weather.netlify.app/",
+    sourceLink: "https://github.com/abdul-korim-web/weather",
+  },
+  {
+    title: "Phone Shop",
+    description:
+      "Phone Shop is a simple e-commerce web application built using React and Redux Toolkit. Users can view products, add them to the cart, update quantities, remove items, and view the total price dynamically.",
+    image: "/image/PhoneShop.png",
+    liveLink: "https://abdul-phone-shop.netlify.app/",
+    sourceLink: "https://github.com/abdul-korim-web/phones-shop",
+  },
+  {
     title: "Wizia Project",
     description:
       "The project features a clean UI, responsive design, and smooth animations for a professional SaaS experience.",
@@ -25,7 +41,8 @@ const projects = [
       "The project provides features like debit card creation, offers section, reviews, FAQs, and a contact form — all with a clean UI and animations.",
     image: "/image/WernFinance.png",
     liveLink: "https://react-wern-finance.netlify.app/",
-    sourceLink: "https://github.com/abdul-korim-web/Wern-Finance-React-Project-2",
+    sourceLink:
+      "https://github.com/abdul-korim-web/Wern-Finance-React-Project-2",
   },
 ];
 
@@ -35,8 +52,7 @@ const NavProjects = () => {
   // Filtered projects
   const filteredProjects = projects.filter(
     (project) =>
-      project.title.toLowerCase().includes(search.toLowerCase()) ||
-      project.description.toLowerCase().includes(search.toLowerCase())
+      project.title.toLowerCase().includes(search.toLowerCase()) 
   );
 
   return (
