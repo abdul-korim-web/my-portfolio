@@ -16,7 +16,7 @@ function App() {
   const [istimeup, settimeup] = useState(true);
   setTimeout(() => {
     settimeup(false);
-  }, 2000);
+  }, 1000);
   if (istimeup) {
     return (
       <>
