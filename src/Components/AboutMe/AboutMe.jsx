@@ -28,9 +28,9 @@ const AboutMe = () => {
             className="flex justify-center"
           >
             <img
-              src="/image/logo.png"
+              src="/image/abdulkorm.png"
               alt="Profile"
-              className="rounded-2xl shadow-2xl w-80 h-80 object-cover border-4 border-indigo-500 hover:scale-105 transition-transform duration-500"
+              className="rounded-2xl shadow-2xl w-1000 h-100 object-cover border-4 border-indigo-500 hover:scale-105 transition-transform duration-500"
             />
           </motion.div>
 

@@ -76,7 +76,7 @@ const Navbar = () => {
         >
           <img
             className="w-[50px] h-[50px] rounded-full cursor-pointer"
-            src="/image/logo.png"
+            src="/image/abdulkorm.png"
             alt="logo"
             onClick={()=>{native(`/`)}}
 

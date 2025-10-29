@@ -42,13 +42,13 @@ const Hero = () => {
   }, [skills.length]);
 
   return (
-    <section className="max-w-full py-20 px-5 flex flex-col md:flex-row justify-center items-center md:space-x-10 space-y-10 md:space-y-0 bg-gray-100 dark:bg-gray-900 md:h-[100vh]">
+    <section className="max-w-full py-20 px-5 flex flex-col md:flex-row justify-center items-center md:space-x-10 space-y-0 md:space-y-0 bg-gray-100 dark:bg-gray-900 md:h-[100vh]">
       {/* Hero Image */}
-      <div className="w-full md:w-1/2 flex justify-center">
+      <div className="w-full md:w-1/2 flex justify-center ">
         <img
-          src="image/logo.png"
+          src="image/abdulkorm.png"
           alt="Hero Image"
-          className="rounded-2xl shadow-lg w-80 h-80 object-cover"
+          className=" "
         />
       </div>
 

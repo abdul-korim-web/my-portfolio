@@ -18,9 +18,9 @@ const About = () => {
           className="w-full md:w-1/2 flex justify-center"
         >
           <img
-            src="image/logo.png"
+            src="image/abdulkorm.png"
             alt="About Abdul Korim"
-            className="rounded-2xl shadow-xl w-80 h-80 object-cover border-4 border-indigo-500/30"
+            className="rounded-2xl shadow-xl w-100 h-100 object-cover border-4 border-indigo-500/30"
           />
         </motion.div>
 
